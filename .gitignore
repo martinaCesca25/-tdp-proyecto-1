@@ -1,0 +1,6 @@
+#ignore configuration files
+*.classpath
+*.project
+
+#ignore compiled files
+bin
