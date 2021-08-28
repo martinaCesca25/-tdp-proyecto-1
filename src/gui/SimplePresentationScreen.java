@@ -7,6 +7,7 @@ import java.awt.Font;
 import java.awt.Toolkit;
 import java.time.LocalDateTime;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -15,6 +16,7 @@ import javax.swing.border.EmptyBorder;
 import entities.Student;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 @SuppressWarnings("serial")
 public class SimplePresentationScreen extends JFrame {
@@ -31,10 +33,7 @@ public class SimplePresentationScreen extends JFrame {
 	private JTextField textField_4;
 	private JLabel lblNewLabel_5;
 	private JLabel lblNewLabel_6;
-	private JLabel lblNewLabel_7;
-	private JLabel lblNewLabel_8;
-	private JLabel lblNewLabel_9;
-	private JLabel lblNewLabel_10;
+	
 
 	public SimplePresentationScreen(Student studentData) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Dell\\Documents\\Universidad\\Tecnología de programación\\TDP-1\\proyecto-1\\src\\images\\tdp.png")); 
@@ -127,6 +126,13 @@ public class SimplePresentationScreen extends JFrame {
 		lblNewLabel_5.setText("Esta ventana fue generada el " + LocalDateTime.now().getDayOfMonth()+"/"+
 		LocalDateTime.now().getMonth().getValue()+"/"+LocalDateTime.now().getYear() + " a las " + LocalDateTime.now().getHour()+ 
 		":"+ LocalDateTime.now().getMinute()+ ":"+ LocalDateTime.now().getSecond());
+		
+		lblNewLabel_6 = new JLabel("");
+		lblNewLabel_6.setVerticalAlignment(SwingConstants.TOP);
+		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_6.setIcon(new ImageIcon(studentData.getPathPhoto()));
+		lblNewLabel_6.setBounds(450, 35, 139, 170);
+		contentPane.add(lblNewLabel_6);
 		
 	}
 }

@@ -9,7 +9,7 @@ public class Launcher {
         //creating and showing this application's GUI.
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-            	Student persona= new Student (129252, "Cesca", "Martina", "marticesca25@gmail.com", "https://github.com/martinaCesca25/-tdp-proyecto-1", "");
+            	Student persona= new Student (129252, "Cesca", "Martina", "marticesca25@gmail.com", "https://github.com/martinaCesca25/-tdp-proyecto-1", "C:\\Users\\Dell\\Documents\\Universidad\\Tecnología de programación\\TDP-1\\proyecto-1\\src\\images\\foto.png");
             	SimplePresentationScreen presentacion= new SimplePresentationScreen(persona);
             	presentacion.setVisible(true);
             }
