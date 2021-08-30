@@ -60,6 +60,7 @@ public class SimplePresentationScreen extends JFrame {
 		tabInformation.setPreferredSize(new Dimension(425, 275));
 		tabbedPane.addTab("Información del alumno", null, tabInformation, "Muestra la información declarada por el alumno");
 		tabInformation.setLayout(null);
+		
 		lblNewLabel = new JLabel("LU");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblNewLabel.setBounds(10, 27, 68, 14);
