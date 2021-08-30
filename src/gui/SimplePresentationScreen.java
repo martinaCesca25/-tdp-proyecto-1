@@ -1,6 +1,6 @@
 package gui;
 
-import java.awt.BorderLayout;
+
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -36,7 +36,7 @@ public class SimplePresentationScreen extends JFrame {
 	
 
 	public SimplePresentationScreen(Student studentData) {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Dell\\Documents\\Universidad\\Tecnología de programación\\TDP-1\\proyecto-1\\src\\images\\tdp.png")); 
+		setIconImage(Toolkit.getDefaultToolkit().getImage(SimplePresentationScreen.class.getResource("/images/tdp.png"))); 
 		this.studentData = studentData;
 		
 		contentPane = new JPanel();
@@ -130,7 +130,7 @@ public class SimplePresentationScreen extends JFrame {
 		lblNewLabel_6 = new JLabel("");
 		lblNewLabel_6.setVerticalAlignment(SwingConstants.TOP);
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_6.setIcon(new ImageIcon(studentData.getPathPhoto()));
+		lblNewLabel_6.setIcon(new ImageIcon(SimplePresentationScreen.class.getResource(studentData.getPathPhoto())));
 		lblNewLabel_6.setBounds(450, 35, 139, 170);
 		contentPane.add(lblNewLabel_6);
 		
